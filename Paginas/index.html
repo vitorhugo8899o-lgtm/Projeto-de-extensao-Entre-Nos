@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -37,20 +37,45 @@
                     <li><a href="#inicio" class="active">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#materiais">Materiais</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="projetos.html">Projetos Sociais</a></li>
                 </ul>
             </nav>
 
-            <button class="theme-toggle" id="theme-toggle" aria-label="Alternar modo escuro">
-                <svg id="theme-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="currentColor" stroke-width="1.6"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <span id="theme-label">Modo escuro</span>
-            </button>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Alternar modo escuro">
+                    <svg id="theme-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span id="theme-label">Modo escuro</span>
+                </button>
+
+                <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false"
+                    aria-controls="mobile-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
+
+    <!-- Menu mobile -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+        <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Fechar menu">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+        </button>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#materiais">Materiais</a></li>
+            <li><a href="projetos.html">Projetos Sociais</a></li>
+        </ul>
+        <p class="mobile-nav-footer">Você não está sozinha. Estamos juntas.</p>
+    </nav>
 
     <section class="hero" id="inicio">
         <svg class="hero-deco left" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -232,20 +257,9 @@
                                 stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h3>Projetos Parceiros</h3>
+                    <h3>Projetos Sociais</h3>
                     <p>Links para iniciativas que apoiam e transformam vidas.</p>
-                </div>
-
-                <div class="feature" id="contato">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M8 3.5c.4 1.2.9 2.3 1.6 3.3c.3.5.2 1-.2 1.4L8 9.6c1 2.4 3 4.4 5.4 5.4l1.4-1.4c.4-.4.9-.5 1.4-.2c1 .7 2.1 1.2 3.3 1.6c.7.2 1.1.9 1 1.6l-.3 2.1c-.1.7-.7 1.3-1.5 1.2C11.4 19.4 4.6 12.6 4.2 4.7c0-.7.5-1.3 1.2-1.5l2.1-.3c.7-.1 1.3.3 1.5 1Z"
-                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <h3>Fale Conosco</h3>
-                    <p>Entre em contato para mais informações ou atendimento.</p>
+                    <a href="projetos.html" class="feature-link">Ver projetos →</a>
                 </div>
             </div>
         </div>
@@ -259,7 +273,7 @@
                 stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
         </svg>
     </div>
+    <script src="../Scprit/script-home.js"></script>
 </body>
-<script src="../Scprit/script-home.js"></script>
 
 </html>
