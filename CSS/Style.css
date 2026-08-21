@@ -883,3 +883,325 @@ footer {
         animation: none !important;
     }
 }
+
+/* ---------- Materials page (Materiais) ---------- */
+.materials-toolbar {
+    padding: 6px 0 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.toolbar-inner {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 18px 22px;
+    box-shadow: 0 20px 40px -30px rgba(43, 34, 40, 0.25);
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1 1 260px;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 12px 20px;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.search-field:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-pale);
+}
+
+.search-field svg {
+    width: 18px;
+    height: 18px;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.search-field input {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+.search-field input::placeholder {
+    color: var(--text-muted);
+}
+
+.filter-pills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-pill {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    padding: 10px 20px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background .25s ease, color .25s ease, transform .2s ease, border-color .25s ease;
+}
+
+.filter-pill:hover {
+    transform: translateY(-1px);
+    border-color: var(--accent);
+}
+
+.filter-pill.active {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    border-color: transparent;
+    color: #fff;
+}
+
+.filter-pill:focus-visible,
+.download-btn:focus-visible,
+.reset-filters:focus-visible {
+    outline: 2px solid var(--accent-dark);
+    outline-offset: 2px;
+}
+
+.materials-count {
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    padding-left: 4px;
+}
+
+.materials {
+    padding: 10px 0 90px;
+    position: relative;
+}
+
+.materials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.material-card {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 26px;
+    box-shadow: 0 20px 40px -32px rgba(43, 34, 40, 0.25);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.material-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 46px -28px rgba(168, 84, 95, 0.3);
+}
+
+.material-card.is-hidden {
+    display: none;
+}
+
+.material-thumb {
+    position: relative;
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--accent-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.material-thumb svg {
+    width: 34px;
+    height: 34px;
+    color: var(--accent-dark);
+}
+
+.material-thumb-tag {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--accent-dark);
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    box-shadow: 0 4px 10px -4px rgba(43, 34, 40, .5);
+}
+
+.material-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.material-category {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    background: var(--accent-pale);
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+}
+
+.material-body h3 {
+    font-size: 1.15rem;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.material-desc {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    max-width: 640px;
+    margin-bottom: 14px;
+}
+
+.material-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.material-source {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.material-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.72rem;
+    color: var(--accent-dark);
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+
+.material-actions {
+    flex-shrink: 0;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #fff;
+    padding: 13px 22px;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    box-shadow: var(--shadow);
+    white-space: nowrap;
+    transition: transform .25s ease, box-shadow .25s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 26px 40px -18px rgba(168, 84, 95, 0.5);
+}
+
+.download-btn svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.materials-empty {
+    text-align: center;
+    padding: 70px 20px;
+    color: var(--text-muted);
+}
+
+.materials-empty svg {
+    width: 32px;
+    height: 32px;
+    color: var(--accent);
+    margin: 0 auto 16px;
+}
+
+.materials-empty p {
+    margin-bottom: 18px;
+}
+
+.reset-filters {
+    display: inline-flex;
+    align-items: center;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    color: var(--accent-dark);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 11px 24px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform .2s ease, background .25s ease;
+}
+
+.reset-filters:hover {
+    transform: translateY(-2px);
+    background: var(--accent-pale);
+}
+
+@media (max-width: 720px) {
+    .toolbar-inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-pills {
+        justify-content: flex-start;
+    }
+
+    .material-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .material-desc {
+        max-width: 100%;
+    }
+
+    .material-actions {
+        width: 100%;
+    }
+
+    .download-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
